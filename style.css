@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #d35400;
+
+  border-image-source: url('./images/candy-corn.jpg');
+  border-image-width: 50px;
+  border-image-slice: 35 25
+}
+
+header {
+  background: #2f36408f;
+  color: whitesmoke;
+
+  padding: 5px 0;
+  text-align: center;
+}
