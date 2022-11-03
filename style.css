@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "nerd-fonts";
+  src: url("./fonts/Symbols-2048-em Nerd Font Complete.ttf")
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +16,36 @@ body {
   border-image-width: 50px;
   border-image-slice: 35 25
 }
-
+main {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+}
+section#dashboard {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px
+}
+.progress label {
+  display: block;
+  text-align: center
+}
+.ghost-counter #friendly-icon,
+.ghost-counter #scary-icon{
+  font-family: "nerd-fonts";
+  margin-right: 10px
+}
+#friendly-icon::before {
+  content: '\f2ac';
+  font-size: 24px;
+  color: whitesmoke
+}
+#scary-icon::before {
+  content: '\f79f';
+  font-size: 24px;
+  color: whitesmoke
+}
 header {
-  background: #2f36408f;
+  background: #282425e6;
   color: whitesmoke;
 
   padding: 5px 0;
