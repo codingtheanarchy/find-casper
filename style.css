@@ -7,7 +7,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   height: 100vh;
   background: #d35400;
@@ -15,6 +14,13 @@ body {
   border-image-source: url('./images/candy-corn.jpg');
   border-image-width: 50px;
   border-image-slice: 35 25
+}
+header {
+  background: #282425e6;
+  color: whitesmoke;
+
+  padding: 5px 0;
+  text-align: center;
 }
 main {
   width: calc(100% - 100px);
@@ -25,12 +31,28 @@ section#dashboard {
   justify-content: space-between;
   margin: 12px
 }
-.progress label {
+/* game stats box - flex item */
+section#dashboard :first-child {
+  flex-basis: 250px;
+}
+#fear-meter-box > * {
   display: block;
+  margin: 5px 0
+}
+/* label */
+#fear-meter-box :first-child {
   text-align: center
 }
-.ghost-counter #friendly-icon,
-.ghost-counter #scary-icon{
+/* progress bar */
+#fear-meter-box :last-child {
+  width: 100%;
+  height: 30px;
+}
+#fear-meter-box :last-child::-moz-progress-bar,
+#fear-meter-box :last-child::-webkit-progress-bar {
+ background: yellow;
+}
+#ghost-counter .ghost-icon {
   font-family: "nerd-fonts";
   margin-right: 10px
 }
@@ -43,11 +65,4 @@ section#dashboard {
   content: '\f79f';
   font-size: 24px;
   color: whitesmoke
-}
-header {
-  background: #282425e6;
-  color: whitesmoke;
-
-  padding: 5px 0;
-  text-align: center;
 }
