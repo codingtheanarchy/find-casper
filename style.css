@@ -7,9 +7,18 @@
   padding: 0;
   box-sizing: border-box;
 }
+button {
+  width: 120px;
+  height: 30px;
+  cursor: pointer;
+  color: whitesmoke;
+  font-weight: bold;
+  background: radial-gradient(circle, rgba(211,84,0,1) 0%, rgba(113,36,36,1) 71%);
+  border: #ccc groove 3px;
+}
 body {
   height: 100vh;
-  background: #d35400;
+  background: #f2572c url("./images/casper-background.png") repeat-x top 50% right 10%; 
 
   border-image-source: url('./images/candy-corn.jpg');
   border-image-width: 50px;
@@ -31,20 +40,21 @@ section#dashboard {
   justify-content: space-between;
   margin: 12px
 }
-/* game stats box - flex item */
-section#dashboard :first-child {
+/* flex items*/
+section#dashboard > * {
   flex-basis: 250px;
 }
+/* select all children */
 #fear-meter-box > * {
   display: block;
   margin: 5px 0
 }
 /* label */
-#fear-meter-box :first-child {
+#fear-meter-box label {
   text-align: center
 }
 /* progress bar */
-#fear-meter-box :last-child {
+#fear-meter-box progress {
   width: 100%;
   height: 30px;
 }
@@ -65,4 +75,19 @@ section#dashboard :first-child {
   content: '\f79f';
   font-size: 24px;
   color: whitesmoke
+}
+#doors-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+
+  max-width: 1250px;
+  margin: 0 auto;
+}
+#doors-container .door {
+  flex-basis: 214px;
+}
+#doors-container .door img {
+  width: 100%;
+  max-width: 214px
 }
