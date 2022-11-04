@@ -13,14 +13,16 @@
     </header>
     <main>
       <section id="dashboard">
-        <div class="game-stats">
-          <div class="progress">
+        <div id="game-stats">
+          <div id="fear-meter-box">
             <label for="progress-bar">Fear Meter</label>
             <progress id="progress-bar" value="0" max="70"></progress>
           </div>
-          <div class="ghost-counter">
-            <span><i id="friendly-icon"></i>Friendly Ghosts: <span id="friendly-score">0</span</span><br>
-            <span><i id="scary-icon"></i>Scary Ghosts: <span id="scary-score">0</span></span>
+          <div id="ghost-counter">
+            <div><i id="friendly-icon" class="ghost-icon"></i>Friendly Ghosts:
+              <span id="friendly-score">0</span></div>
+            <div><i id="scary-icon" class="ghost-icon"></i>Scary Ghosts: <span
+              id="scary-score">0</span></div>
           </div>
         </div>
         <div class="start-reset-btns">
