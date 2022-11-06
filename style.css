@@ -7,6 +7,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+img {
+  width: 100%;
+  display: inline-block
+}
 button {
   width: 120px;
   height: 30px;
@@ -86,8 +90,9 @@ section#dashboard > * {
 }
 #doors-container .door {
   flex-basis: 214px;
-}
-#doors-container .door img {
-  width: 100%;
   max-width: 214px
 }
+#doors-container img {
+  height: 250px
+}
+
