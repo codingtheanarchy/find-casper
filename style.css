@@ -85,14 +85,20 @@ section#dashboard > * {
   flex-flow: row wrap;
   justify-content: space-evenly;
 
+  position: relative;
   max-width: 1250px;
   margin: 0 auto;
 }
 #doors-container .door {
   flex-basis: 214px;
-  max-width: 214px
+  max-width: 214px;
+  position: relative
 }
 #doors-container img {
   height: 250px
 }
 
+img.ghost {
+  position: absolute;
+  left: 0
+}
