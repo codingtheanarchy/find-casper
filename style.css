@@ -10,6 +10,10 @@
   font-family: "AlegreyaThin";
   src: url("./fonts/AlegreyaSansSC-Thin.ttf")
 }
+@font-face {
+  font-family: "AlegreyaLight";
+  src: url("./fonts/AlegreyaSans-Light.ttf")
+}
 * {
   margin: 0;
   padding: 0;
@@ -136,7 +140,8 @@ img.ghost {
 /* Win and Lose containers */
 section#results-container {
   height: 100%;
-  background: #b33939;
+  /* background: #b33939; */
+  background: #2e86de;
   opacity: 0.9
 }
 
@@ -154,18 +159,23 @@ section#results-container {
 #heading-box h2 {
   font-family: "AlegreyaBold";
   font-size: 4em;
-  color: #ff5252; 
+  /* color: #ff5252;  */
+  color: #feca57
 }
 
 #heading-box p {
-  font-family: "AlegreyaThin";
+  font-family: "AlegreyaLight";
   font-size: 1.5em;
+  color: #ecf0f1;
+  max-width: 675px;
+  text-align: center;
 }
 
 #reaper-box {
   display: flex;
   justify-content: center;
-  background-image: url("./images/pumpkin-overlay.png");
+  /* background-image: url("./images/pumpkin-overlay.png"); */
+  background-image: url("./images/beach-overlay.png");
   background-repeat: repeat-x;
   background-position: bottom;
 }
@@ -173,5 +183,5 @@ section#results-container {
 #reaper-box img {
   width: 527px;
   height: 395px;
-  z-index: -1
+  z-index: 1
 }
