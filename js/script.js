@@ -1,6 +1,4 @@
-// Objective: User has 3 chances, each chance consists of 2 clicks. If the
-// user finds a good ghost, then the click counter is NOT increased, but if the user finds
-// a scary ghost, then the click counter is increased
+import { gameResults } from "./results.js" 
 
 let playerChances = 3
 let playerStrikes = 0
@@ -55,6 +53,7 @@ doorsContainer.addEventListener('click', function (event) {
       scaryGhostCounter++
       // Update UI
       scaryScore.textContent = scaryGhostCounter
+      // TODO: Check if chances equal zero, then run imported module function 
   } else {
       // Update friendly score
       friendlyGhostCounter++

@@ -1,18 +1,18 @@
 @font-face {
   font-family: "nerd-fonts";
-  src: url("./fonts/Symbols-2048-em Nerd Font Complete.ttf")
+  src: url("../fonts/Symbols-2048-em Nerd Font Complete.ttf")
 }
 @font-face {
   font-family: "AlegreyaBold";
-  src: url("./fonts/AlegreyaSansSC-Bold.ttf")
+  src: url("../fonts/AlegreyaSansSC-Bold.ttf")
 }
 @font-face {
   font-family: "AlegreyaThin";
-  src: url("./fonts/AlegreyaSansSC-Thin.ttf")
+  src: url("../fonts/AlegreyaSansSC-Thin.ttf")
 }
 @font-face {
   font-family: "AlegreyaLight";
-  src: url("./fonts/AlegreyaSans-Light.ttf")
+  src: url("../fonts/AlegreyaSans-Light.ttf")
 }
 * {
   margin: 0;
@@ -34,9 +34,9 @@ button {
 }
 body {
   height: 100vh;
-  /* background: #f2572c url("./images/casper-background.png") repeat-x top 50% right 10%;  */
+  background: #f2572c url("../images/casper-background.png") repeat-x top 50% right 10%; 
 
-  border-image-source: url('./images/candy-corn.jpg');
+  border-image-source: url('../images/candy-corn.jpg');
   border-image-width: 50px;
   border-image-slice: 35 25
 }
@@ -139,10 +139,17 @@ img.ghost {
 
 /* Win and Lose containers */
 section#results-container {
+  display: none;
   height: 100%;
-  /* background: #b33939; */
-  background: #2e86de;
   opacity: 0.9
+}
+
+section#results-container.gameover-screen {
+  background: #b33939;
+}
+
+section#results-container.winner-screen {
+  background: #2e86de  
 }
 
 #heading-box, #reaper-box {
@@ -159,8 +166,14 @@ section#results-container {
 #heading-box h2 {
   font-family: "AlegreyaBold";
   font-size: 4em;
-  /* color: #ff5252;  */
-  color: #feca57
+}
+
+#heading-box h2.gameover-screen {
+  color: #ff5252
+}
+
+#heading-box h2.winner-screen {
+  color: #feca57 
 }
 
 #heading-box p {
@@ -174,14 +187,27 @@ section#results-container {
 #reaper-box {
   display: flex;
   justify-content: center;
-  /* background-image: url("./images/pumpkin-overlay.png"); */
-  background-image: url("./images/beach-overlay.png");
   background-repeat: repeat-x;
   background-position: bottom;
+}
+
+#reaper-box.gameover-screen {
+  background-image: url("../images/pumpkin-overlay.png")
+}
+
+#reaper-box.winner-screen {
+  background-image: url("../images/beach-overlay.png");
 }
 
 #reaper-box img {
   width: 527px;
   height: 395px;
+}
+
+#reaper-box img.gameover-screen {
+  z-index: -1
+}
+
+#reaper-box img.winner-screen {
   z-index: 1
 }
