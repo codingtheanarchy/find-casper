@@ -4,7 +4,9 @@
     <title></title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./css/font-awesome.css" rel="stylesheet" />
     <link href="./css/style.css" rel="stylesheet" />
+    <link href="./css/fear-meter.css" rel="stylesheet" />
     <script src="./js/script.js" type="module" defer></script>
     <script src="./js/results.js" type="module" defer></script>
   </head>
@@ -16,14 +18,14 @@
       <section id="dashboard">
         <div id="game-stats">
           <div id="fear-meter-box">
-            <label for="progress-bar">Fear Meter</label>
+            <i class="fa-solid fa-skull"></i>
             <div id="progress-box">
-              <i class="skull-icon"></i>
-              <div id="custom-progress-bar">
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+              <span id="hp-bar-1" class="hp-bar"></span>
+              <span id="hp-bar-2" class="hp-bar"></span>
+              <span id="hp-bar-3" class="hp-bar"></span>
+              <span id="hp-bar-4" class="hp-bar"></span>
+              <span id="hp-bar-5" class="hp-bar"></span>
+              <span id="hp-bar-6" class="hp-bar"></span>
             </div>
           </div>
           <div id="ghost-counter">

@@ -22,6 +22,7 @@ const ghosts = [
 ]
 
 const doorsContainer = document.querySelector('#doors-container')
+const fearBars = document.querySelectorAll('.hp-bar')
 const scaryScore = document.querySelector('#scary-score')
 const friendlyScore = document.querySelector('#friendly-score')
 
@@ -41,6 +42,8 @@ doorsContainer.addEventListener('click', function (event) {
     ghosts[randomNumber] === 'scary-ghost-1' ||
     ghosts[randomNumber] === 'scary-ghost-2'
   ) {
+    // Increase the fear meter by 1 bar
+    fearBars[scaryGhostCounter].style.background = "red"
     // Increase the player strikes
     playerStrikes++
     // if the strike counter equals 2, then reset the strike counter

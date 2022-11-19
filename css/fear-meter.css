@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#fear-meter-box {
+  display: flex;
+  gap: 5px;
+  width: 300px;
+  margin: 10px;
+}
+
+.fa-skull {
+  font-size: 2.5em;
+  color: red;
+  background: black;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+#progress-box {
+  display: flex;
+  width: 100%;
+  border: 2px solid black;
+  background: #471f1f42;
+}
+
+#progress-box span.hp-bar {
+  display: inline-block;
+  width: 16.66%; 
+  height: 100%;
+}
