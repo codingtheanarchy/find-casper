@@ -144,11 +144,13 @@ section#results-container {
   opacity: 0.9
 }
 
-section#results-container.gameover-screen {
+section#results-container.gameover {
+  display: block;
   background: #b33939;
 }
 
-section#results-container.winner-screen {
+section#results-container.winner {
+  display: block;
   background: #2e86de  
 }
 
@@ -168,11 +170,11 @@ section#results-container.winner-screen {
   font-size: 4em;
 }
 
-#heading-box h2.gameover-screen {
+#heading-box h2.gameover {
   color: #ff5252
 }
 
-#heading-box h2.winner-screen {
+#heading-box h2.winner {
   color: #feca57 
 }
 
@@ -191,11 +193,11 @@ section#results-container.winner-screen {
   background-position: bottom;
 }
 
-#reaper-box.gameover-screen {
+#reaper-box.gameover {
   background-image: url("../images/pumpkin-overlay.png")
 }
 
-#reaper-box.winner-screen {
+#reaper-box.winner {
   background-image: url("../images/beach-overlay.png");
 }
 
@@ -204,10 +206,10 @@ section#results-container.winner-screen {
   height: 395px;
 }
 
-#reaper-box img.gameover-screen {
+#reaper-box img.gameover {
   z-index: -1
 }
 
-#reaper-box img.winner-screen {
+#reaper-box img.winner {
   z-index: 1
 }

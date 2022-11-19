@@ -1,4 +1,4 @@
-import { gameResults } from "./results.js" 
+import { displayResults } from './results.js'
 
 let playerChances = 3
 let playerStrikes = 0
@@ -7,6 +7,7 @@ let friendlyGhostCounter = 0
 
 // Keeps track of how many doors the players has opened
 let doorsClicked = 0
+
 const ghosts = [
   'scary-ghost-1',
   'scary-ghost-1',
@@ -49,15 +50,22 @@ doorsContainer.addEventListener('click', function (event) {
       // Reset player strikes
       playerStrikes = 0
     }
-      // Update scary score
-      scaryGhostCounter++
-      // Update UI
-      scaryScore.textContent = scaryGhostCounter
-      // TODO: Check if chances equal zero, then run imported module function 
+    // Update scary score
+    scaryGhostCounter++
+    // Update UI
+    scaryScore.textContent = scaryGhostCounter
+    // Check if player got gameover
+    if (playerChances === 0) {
+      displayResults("gameover")
+    }
   } else {
-      // Update friendly score
-      friendlyGhostCounter++
-      // Update UI
-      friendlyScore.textContent = friendlyGhostCounter
+    // Update friendly score
+    friendlyGhostCounter++
+    // Update UI
+    friendlyScore.textContent = friendlyGhostCounter
+    // Check if player won the game
+    if (friendlyGhostCounter === 4) {
+      displayResults("winner")
+    }
   }
 })
