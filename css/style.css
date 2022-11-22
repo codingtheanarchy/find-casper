@@ -189,8 +189,7 @@ section#results-container.winner {
 #reaper-box {
   display: flex;
   justify-content: center;
-  background-repeat: repeat-x;
-  background-position: bottom;
+  background-size: 100% 100%;
 }
 
 #reaper-box.gameover {
@@ -202,14 +201,12 @@ section#results-container.winner {
 }
 
 #reaper-box img {
-  width: 527px;
-  height: 395px;
-}
-
-#reaper-box img.gameover {
-  z-index: -1
+  max-width: 527px;
+  max-height: 395px;
 }
 
 #reaper-box img.winner {
-  z-index: 1
+  position: relative;
+  top: 24px
 }
+
